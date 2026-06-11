@@ -1,0 +1,427 @@
+{
+  "concerts": [
+    {
+      "id": "miku-2018",
+      "artist": "Hatsune Miku",
+      "tour": "Miku with you 2018",
+      "venue": "北京五棵松M空间",
+      "city": "Beijing",
+      "date": "2018-10",
+      "time": "20:00",
+      "genre": {
+        "en": "Vocaloid",
+        "ja": "Vocaloid",
+        "zh": "Vocaloid"
+      },
+      "color": "#39c5bb",
+      "accent": "#e879f9",
+      "rating": 2,
+      "note": {
+        "en": "Awful experience",
+        "ja": "泣いた。",
+        "zh": "坐下！"
+      },
+      "poster": "/posters/miku-2018.png"
+    },
+    {
+      "id": "miku-2019",
+      "artist": "Hatsune Miku",
+      "tour": "Magical Mirai 2019",
+      "venue": "慕张メッセ",
+      "city": "Tokyo",
+      "date": "2019-08",
+      "time": "19:30",
+      "genre": {
+        "en": "ambient / electronic",
+        "zh": "氛围 / 电子",
+        "ja": "アンビエント / エレクトロニック"
+      },
+      "color": "#0ea5e9",
+      "accent": "#38bdf8",
+      "rating": 4,
+      "note": {
+        "en": ""
+      },
+      "poster": "/posters/miku-2019.webp"
+    },
+    {
+      "id": "miku-2024-1",
+      "artist": "Hatsune Miku",
+      "tour": "Miku with you 2024",
+      "venue": "前滩31演艺中心·大剧场",
+      "city": "Shanghai",
+      "date": "2024-07",
+      "time": "18:00",
+      "genre": {
+        "en": "vocaloid",
+        "ja": "vocaloid",
+        "zh": "vocaloid"
+      },
+      "color": "#ef4444",
+      "accent": "#f59e0b",
+      "rating": 4,
+      "note": {
+        "en": ""
+      },
+      "poster": "/posters/miku-2024-1.webp"
+    },
+    {
+      "id": "miku-2024-2",
+      "artist": "Hatsune Miku",
+      "tour": "Magical Mirai 2024",
+      "venue": "慕张メッセ 、 INTEX OSAKA",
+      "city": "Tokyo, Osaka",
+      "date": "2024-08",
+      "time": "18:00",
+      "genre": {
+        "en": ""
+      },
+      "color": "#10b981",
+      "accent": "#34d399",
+      "rating": 5,
+      "note": {
+        "en": "Full live band, the FFT in my head was peaking the whole night.",
+        "zh": "完整的现场乐队,我脑子里的 FFT 整晚都在爆表。",
+        "ja": "フルバンド編成、頭の中の FFT が一晩中ピークだった。"
+      },
+      "poster": "/posters/miku-2024-2.webp"
+    },
+    {
+      "id": "miku-2025-1",
+      "artist": "Hatsune Miku",
+      "tour": "Magical Mirai 2025",
+      "venue": "Sunplaza Hall Sendai, INTEX Osaka",
+      "city": "Sendai,Osaka",
+      "date": "2025-08",
+      "time": "14:00",
+      "genre": {
+        "en": ""
+      },
+      "color": "#f97316",
+      "accent": "#fb923c",
+      "rating": 4,
+      "note": {
+        "en": ""
+      },
+      "poster": "/posters/miku-2025-1.webp"
+    },
+    {
+      "id": "miku-2025-2",
+      "artist": "Hatsune Miku",
+      "tour": "MIKU EXPO 2025",
+      "venue": "AsiaWorld-Arena",
+      "city": "Hongkong",
+      "date": "2025-11",
+      "time": "19:00",
+      "genre": {
+        "en": ""
+      },
+      "color": "#06b6d4",
+      "accent": "#22d3ee",
+      "rating": 5,
+      "note": {
+        "en": ""
+      },
+      "poster": "/posters/miku-2025-2.webp"
+    },
+    {
+      "id": "miku-2025-3",
+      "artist": "Hatsune Miku",
+      "tour": "Miku with you 2025",
+      "venue": "上海静安体育中心",
+      "city": "Shanghai",
+      "date": "2025-12",
+      "time": "",
+      "genre": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "color": "",
+      "accent": "",
+      "rating": 0,
+      "note": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "poster": "/posters/miku-2025-3.webp"
+    },
+    {
+      "id": "miku-2026",
+      "artist": "Hatsune Miku",
+      "tour": "LAWSON 50th ANNIVERSARY",
+      "venue": "K-ARENA",
+      "city": "YOKOHAMA",
+      "date": "2026-01",
+      "time": "",
+      "genre": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "color": "",
+      "accent": "",
+      "rating": 0,
+      "note": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "poster": "/posters/miku-2026.webp"
+    },
+    {
+      "id": "live-2019-1",
+      "artist": "PinocchioP 、sasakure.uk",
+      "tour": "欢迎观临",
+      "venue": "",
+      "city": "Shanghai",
+      "date": "2019",
+      "time": "",
+      "genre": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "color": "",
+      "accent": "",
+      "rating": 0,
+      "note": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "poster": "/posters/live-2019-1.jpg"
+    },
+    {
+      "id": "okawari-1",
+      "artist": "DJ OKAWARI",
+      "tour": "DJ OKAWARI 2024 Tour",
+      "venue": "",
+      "city": "Shanghai",
+      "date": "2024-10",
+      "time": "",
+      "genre": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "color": "",
+      "accent": "",
+      "rating": 0,
+      "note": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "poster": "/posters/okawari-1.jpg"
+    },
+    {
+      "id": "ebimayo",
+      "artist": "EBIMAYO",
+      "tour": "KKSK Shanghai",
+      "venue": "",
+      "city": "Shanghai",
+      "date": "2024",
+      "time": "",
+      "genre": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "color": "",
+      "accent": "",
+      "rating": 0,
+      "note": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "poster": "/posters/ebimayo.jpg"
+    },
+    {
+      "id": "yinbo-mini",
+      "artist": "Laur , Juggernaut",
+      "tour": "音波狂潮mini",
+      "venue": "The BOXX 城市乐园",
+      "city": "Shanghai",
+      "date": "2025-04-03",
+      "time": "",
+      "genre": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "color": "",
+      "accent": "",
+      "rating": 0,
+      "note": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "poster": "/posters/yinbo-mini.jpg"
+    },
+    {
+      "id": "yinbo-pre",
+      "artist": "Taishi, Nhato, DJ Noriken, Yuta Imai, MNK",
+      "tour": "音波狂潮 preparty",
+      "venue": "大麦66Livehose广州",
+      "city": "Guangzhou",
+      "date": "2025-07-17",
+      "time": "",
+      "genre": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "color": "",
+      "accent": "",
+      "rating": 0,
+      "note": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "poster": "/posters/yinbo-pre.jpg"
+    },
+    {
+      "id": "yinbo-3.0",
+      "artist": "Japan DTM Producers",
+      "tour": "音波狂潮3.0",
+      "venue": "杭州乐动力钱塘体育中心",
+      "city": "Hangzhou",
+      "date": "2025-07-19",
+      "time": "",
+      "genre": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "color": "",
+      "accent": "",
+      "rating": 0,
+      "note": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "poster": "/posters/yinbo-30.jpg"
+    },
+    {
+      "id": "kotoko",
+      "artist": "KOTOKO",
+      "tour": "KOTOKO ASIA TOUR 2025",
+      "venue": "万代南梦宫 梦想剧场",
+      "city": "Shanghai",
+      "date": "2025-03-01",
+      "time": "",
+      "genre": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "color": "",
+      "accent": "",
+      "rating": 0,
+      "note": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "poster": "/posters/kotoko.jpg"
+    },
+    {
+      "id": "pinocchio",
+      "artist": "PinocchioP",
+      "tour": "PinocchioP Asia Tour COMET",
+      "venue": "万代南梦宫 梦想剧场",
+      "city": "Shanghai",
+      "date": "2025-04-19",
+      "time": "",
+      "genre": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "color": "",
+      "accent": "",
+      "rating": 0,
+      "note": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "poster": "/posters/pinocchio.jpg"
+    },
+    {
+      "id": "nayuta",
+      "artist": "nayutalien",
+      "tour": "星祝典",
+      "venue": "瓦肆VAS ear",
+      "city": "Shanghai",
+      "date": "2025-09-13",
+      "time": "",
+      "genre": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "color": "",
+      "accent": "",
+      "rating": 0,
+      "note": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "poster": "/posters/nayuta.jpg"
+    },
+    {
+      "id": "hitorie-1",
+      "artist": "HITORIE",
+      "tour": "Hitorie Freaky Friendship Tour 2025",
+      "venue": "瓦肆VAS est",
+      "city": "Shanghai",
+      "date": "2025-06-02",
+      "time": "",
+      "genre": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "color": "",
+      "accent": "",
+      "rating": 0,
+      "note": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "poster": "/posters/hitorie-1.jpg"
+    },
+    {
+      "id": "hitorie-2",
+      "artist": "HITORIE",
+      "tour": "Connect Series 10th anniversary 2025",
+      "venue": "瓦肆VAS est",
+      "city": "Shanghai",
+      "date": "2025-11-02",
+      "time": "",
+      "genre": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "color": "",
+      "accent": "",
+      "rating": 0,
+      "note": {
+        "en": "",
+        "zh": "",
+        "ja": ""
+      },
+      "poster": "/posters/hitorie-2.jpg"
+    }
+  ]
+}

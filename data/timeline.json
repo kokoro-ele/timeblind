@@ -1,0 +1,190 @@
+{
+  "commits": [
+    {
+      "hash": "y2z0t0o",
+      "date": "2018.09.01",
+      "branch": "main",
+      "refs": [],
+      "title": {
+        "en": "init: The starting point of life",
+        "zh": "init:人生起点",
+        "ja": "init: 人生の出発点"
+      },
+      "author": "kokoro",
+      "summary": {
+        "en": "Escaped the information desert, entered university, and began to get in touch with computers.",
+        "zh": "逃离信息荒漠，进入大学，开始接触计算机。",
+        "ja": "情報の砂漠から逃れ、大学に進学し、コンピュータに触れ始めた。"
+      },
+      "achievements": [
+        {
+          "en": "Survive in a stifling environment.Built an innately resilient personality capable of withstanding heavy pressure.",
+          "zh": "在压抑的环境中存活。获得坚韧抗压的人格底色。",
+          "ja": "抑圧的な環境の中で生き延びる。強靭でストレスに強い人間性の基盤を身につけた。"
+        }
+      ],
+      "diff": {
+        "file": "",
+        "additions": [],
+        "deletions": []
+      }
+    },
+    {
+      "hash": "a1f9c02",
+      "date": "2022-06-30",
+      "branch": "feature/NUAA-bachelor-cs",
+      "refs": [
+        "origin/main",
+        "tag: v0.1-bootstrap"
+      ],
+      "title": {
+        "en": "init: B.Sc. Computer Science",
+        "zh": "init:计算机科学学士",
+        "ja": "init: コンピュータ科学学士"
+      },
+      "author": "kokoro",
+      "summary": {
+        "en": "Kicked off the guidance of my career and received systematic computer science education.",
+        "zh": "职业生涯的引导启动，接受系统的计算机教育。",
+        "ja": "キャリアの歩みが始まり、体系的なコンピュータ教育を受けた。"
+      },
+      "achievements": [
+        {
+          "en": "Outstanding Graduate (Top 10% GPA)",
+          "zh": "优秀毕业生(GPA前10%)",
+          "ja": "優秀卒業生（GPA上位10%）"
+        },
+        {
+          "en": "Developed a generation tool for adversarial sample training and obtained a patent.",
+          "ja": "敵対的サンプル作成・育成ツールを開発し、特許を取得した。",
+          "zh": "完成一个对抗样本养成生成工具并获得专利。"
+        }
+      ],
+      "diff": {
+        "file": "career/education.md",
+        "additions": [
+          "+ degree: B.Sc. Computer Science",
+          "+ focus: operating system, data structure, network",
+          "+ thesis: Workflow Engine Orchestration Tool"
+        ],
+        "deletions": [
+          "- status: novice "
+        ]
+      }
+    },
+    {
+      "hash": "7b3e1d8",
+      "date": "2023-11-13",
+      "branch": "feat/UoS-master-cs",
+      "refs": [
+        "tag: v1.0-WonderfulExperience"
+      ],
+      "title": {
+        "en": "feat: Master of Computer Science",
+        "ja": "feat：コンピュータ科学修士",
+        "zh": "feat：计算机科学硕士"
+      },
+      "author": "kokoro",
+      "summary": {
+        "en": "Studied Cybersecurity and Modern Web Development at the University of Southampton.",
+        "zh": "在南安普顿大学学习网络安全和现代 web 开发。",
+        "ja": "サウサンプトン大学にてサイバーセキュリティと最新の Web 開発を学んだ。"
+      },
+      "achievements": [
+        {
+          "en": "Graduated with Distinction, full marks in Cybersecurity modules.",
+          "zh": "Distinction 毕业。网络安全课程满分。",
+          "ja": "ディスティンクション合格卒業、サイバーセキュリティ科目満点取得。"
+        }
+      ],
+      "diff": {
+        "file": "career/education.md",
+        "additions": [
+          "+ degree: B.Sc. Computer Science",
+          "+ stack: Kali, React.js, Firebase",
+          "+ thesis: Knowledge Graph Based Movie Recommendation System"
+        ],
+        "deletions": [
+          "- status: student"
+        ]
+      }
+    },
+    {
+      "hash": "c52a90f",
+      "date": "2026-05-22",
+      "branch": "feat/frontendEngineer-at-Meituan",
+      "refs": [],
+      "title": {
+        "en": "feat: Mid-level Frontend Engineer | Advertising Delivery Platform",
+        "zh": "feat: 中级前端工程师 广告投放平台",
+        "ja": "feat：ミッドフロントエンドエンジニア 広告配信プラットフォーム"
+      },
+      "author": "kokoro",
+      "summary": {
+        "en": "Served as the owner of core products, driving stable implementation and long-term sustainable business growth. Meanwhile, maintained team coding standards, infrastructure and the adoption of AI tools.",
+        "ja": "主力プロダクトのオーナーとして、業務の安定的な立ち上げと長期的な発展を推進。並行してチームのコーディング規約、基盤インフラ、AI ツールの活用体制を整備・維持した",
+        "zh": "作为主营产品的 owner，推动业务平稳落地和长期发展。同时维护组内编码规范、基础设施和 ai 工具的应用"
+      },
+      "achievements": [
+        {
+          "en": "Led the transformation and iteration of core products. Leveraged the gray release configuration system to achieve refined crowd traffic control and ensured stable, controllable rollout of all versions.",
+          "zh": "主导核心产品迭代升级，依托灰度配置系统实现精细化人群流量管控，保障版本灰度发布全流程平稳可控。",
+          "ja": "主力プロダクトの機能転換・アップグレードを主導。グレーリリース設定システムを活用し、ユーザー層を精緻に制御、バージョン公開を安定かつ管理可能な状態に維持した。"
+        },
+        {
+          "en": "Built a user behavior tracing and replay platform to optimize user experience and support reproduction & troubleshooting of online incidents.",
+          "zh": "搭建用户行为回放回溯平台，一方面优化产品用户体验，另一方面支持线上故障复现与问题排查。",
+          "ja": "ユーザー行動トレース・再生プラットフォームを構築。ユーザー体験の改善に貢献すると同時に、オンライン障害の再現・調査を実現した。"
+        },
+        {
+          "en": "Leveraged AI capabilities to build an automated pipeline from PRD to code, enabling self-contained delivery for simple product requirements.",
+          "ja": "AI 機能を活用し、PRD からコードまでの自動化フローを構築。単純な要求に関してはプロダクト側で完結する自走体制を実現した。",
+          "zh": "依托 AI 能力搭建 PRD 直达代码的自动化流程机制，简单需求可完成产品侧自主闭环交付。"
+        }
+      ],
+      "diff": {
+        "file": "career/meituan.go",
+        "additions": [
+          "+ role: Mid-level Frontend Engineer",
+          "+ team:  Guiding  two graduate trainees to get familiar with daily development "
+        ],
+        "deletions": [
+          "- architecture: monolith"
+        ]
+      }
+    },
+    {
+      "hash": "e0d7f43",
+      "date": "9999-99-99",
+      "branch": "feat/self-reconstruction",
+      "refs": [
+        "tag: v2.0-keepGoing"
+      ],
+      "title": {
+        "en": "perf: Transition to full-stack engineer proficient in AI tools",
+        "zh": "perf: 向熟练运用ai的全栈工程师转型",
+        "ja": "perf：AI 活用に長けたフルスタックエンジニアへ転身"
+      },
+      "author": "kokoro",
+      "summary": {
+        "en": "To be continued",
+        "ja": "つづく",
+        "zh": "待续"
+      },
+      "achievements": [
+        {
+          "en": "Try to build an influential project",
+          "zh": "尝试写出一个有影响力的项目",
+          "ja": "影響力のあるプロジェクトを作成してみる"
+        }
+      ],
+      "diff": {
+        "file": "career/fullstack.rs",
+        "additions": [
+          "+ role: Fullstack Engineer"
+        ],
+        "deletions": []
+      }
+    }
+  ]
+}

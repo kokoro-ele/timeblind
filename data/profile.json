@@ -1,0 +1,118 @@
+{
+  "name": "Welcome !",
+  "handle": "@timeblind",
+  "role": {
+    "en": "Full-Stack Engineer",
+    "zh": "全栈工程师",
+    "ja": "フルスタックエンジニア"
+  },
+  "tagline": {
+    "en": "Building fast, weird, well-crafted software.",
+    "zh": "打造快速、奇趣、精雕细琢的软件。",
+    "ja": "速くて、風変わりで、丁寧に作り込んだソフトウェアを。"
+  },
+  "location": {
+    "en": "Nanjing, CN",
+    "zh": "中国 · 南京",
+    "ja": "中国 · 南京"
+  },
+  "lat": 32.0603,
+  "lng": 118.7969,
+  "timezone": "Asia/Shanghai",
+  "status": "ACTIVE",
+  "availability": "OPEN_TO_WORK",
+  "bio": {
+    "en": "Engineer who likes shaving milliseconds off the hot path and pixels off the UI. Comfortable from kernel-ish backend internals up to GPU shaders in the browser.",
+    "zh": "热衷于在热点路径上抠掉每一毫秒、在 UI 上抠掉每一像素的工程师。从偏内核的后端底层,到浏览器里的 GPU 着色器,都能游刃有余。",
+    "ja": "ホットパスからミリ秒を、UI からピクセルを削り取るのが好きなエンジニア。カーネル寄りのバックエンド内部から、ブラウザの GPU シェーダーまで対応できます。"
+  },
+  "github": "https://github.com/kokoro-ele",
+  "email": "elekokoro@gmail.com",
+  "stack": [
+    {
+      "name": "TypeScript",
+      "category": "lang",
+      "level": 90,
+      "years": 2
+    },
+    {
+      "name": "Python",
+      "category": "lang",
+      "level": 80,
+      "years": 3
+    },
+    {
+      "name": "React / Next.js",
+      "category": "frontend",
+      "level": 95,
+      "years": 3
+    },
+    {
+      "name": "WebGL / Three.js",
+      "category": "frontend",
+      "level": 20,
+      "years": 1
+    },
+    {
+      "name": "Node.js",
+      "category": "backend",
+      "level": 30,
+      "years": 1
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "data",
+      "level": 10,
+      "years": 0
+    },
+    {
+      "name": "Redis",
+      "category": "data",
+      "level": 10,
+      "years": 0
+    },
+    {
+      "name": "Kubernetes",
+      "category": "infra",
+      "level": 10,
+      "years": 0
+    },
+    {
+      "name": "Docker",
+      "category": "infra",
+      "level": 30,
+      "years": 0.5
+    }
+  ],
+  "metrics": [
+    {
+      "label": "Passion",
+      "value": "99.98%"
+    },
+    {
+      "label": "Coffee/day",
+      "value": "2"
+    },
+    {
+      "label": "prod incidents",
+      "value": "0 "
+    }
+  ],
+  "socials": [
+    {
+      "label": "GitHub",
+      "handle": "kokoro-ele",
+      "url": "https://github.com/kokoro-ele"
+    },
+    {
+      "label": "X",
+      "handle": "@timeblind_",
+      "url": "https://x.com/timeblind_"
+    },
+    {
+      "label": "Email",
+      "handle": "elekokoro@gmail.com",
+      "url": "mailto:elekokoro@gmail.com"
+    }
+  ]
+}
