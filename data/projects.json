@@ -1,0 +1,63 @@
+[
+  {
+    "name": "EasyWyckoff",
+    "url": "https://easywyckoff.online/",
+    "category": {
+      "en": "AI MARKET RESEARCH",
+      "zh": "AI 市场研究",
+      "ja": "AI市場調査"
+    },
+    "description": {
+      "en": "An AI research workbench combining interactive financial charts, tool-calling agents and persistent workspaces. Independently designed, built, launched and operated.",
+      "zh": "将交互金融图表、工具调用式 Agent 与持久化工作空间结合的 AI 研究工作台。独立完成设计、开发、上线与运营。",
+      "ja": "金融チャート、ツール呼び出し型AIエージェント、永続ワークスペースを統合した調査ツール。設計・開発から公開・運営まで担当。"
+    },
+    "tags": [
+      "React 19",
+      "Hono",
+      "PostgreSQL",
+      "Stripe"
+    ],
+    "color": "#00ffcc"
+  },
+  {
+    "name": "食读",
+    "url": "https://menujp.timeblind.xyz/",
+    "category": {
+      "en": "JAPANESE MENU GUIDE",
+      "zh": "日本菜单学习词典",
+      "ja": "日本語メニュー学習"
+    },
+    "description": {
+      "en": "A Japanese-menu dictionary for Chinese readers, with kana readings, Chinese explanations and breakdowns of compound dish names.",
+      "zh": "面向中文读者的日本菜单学习词典：假名读音、中文释义与组合菜名拆解，让陌生菜单变得可读。",
+      "ja": "中国語話者向けの日本語メニュー辞典。かなの読み方、中国語の意味、複合料理名の分解でメニューの理解をサポート。"
+    },
+    "tags": [
+      "Japanese",
+      "Learning",
+      "880 entries"
+    ],
+    "color": "#fb923c"
+  },
+  {
+    "name": "Lunaria",
+    "url": "https://lunaria.timeblind.xyz/",
+    "category": {
+      "en": "INTERACTIVE ASTRONOMY",
+      "zh": "交互式天文可视化",
+      "ja": "インタラクティブ天文可視化"
+    },
+    "description": {
+      "en": "An interactive 3D Moon viewer. Explore lunar phase, illumination, distance and libration for any date, time and location.",
+      "zh": "交互式 3D 月球查看器。按日期、时间与地点探索月相、照明比例、距离和天平动。",
+      "ja": "日時と場所を指定して、月相・照明率・距離・秤動を探索できるインタラクティブな3D月球ビューアー。"
+    },
+    "tags": [
+      "3D",
+      "WebGL",
+      "Astronomy"
+    ],
+    "color": "#a78bfa"
+  }
+]

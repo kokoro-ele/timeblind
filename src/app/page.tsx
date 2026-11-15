@@ -6,7 +6,7 @@ import CommandPalette from "@/components/nav/CommandPalette";
 import FloatingDock from "@/components/nav/FloatingDock";
 import TechStackDashboard from "@/components/bento/TechStackDashboard";
 import ExperienceTimeline from "@/components/bento/ExperienceTimeline";
-import TicketWallet from "@/components/bento/TicketWallet";
+import Portfolio from "@/components/bento/Portfolio";
 import TravelGlobe from "@/components/bento/TravelGlobe";
 import SystemState from "@/components/bento/SystemState";
 import { profile } from "@/lib/data";
@@ -65,13 +65,13 @@ export default function Home() {
           </BentoCard>
 
           <BentoCard
-            id="concerts"
-            title={t.cards.concerts}
-            tag="03 // tickets"
+            id="projects"
+            title={t.cards.projects}
+            tag="03 // projects"
             accent="#a855f7"
             className="sm:col-span-2 lg:col-span-3"
           >
-            <TicketWallet />
+            <Portfolio />
           </BentoCard>
 
           <BentoCard

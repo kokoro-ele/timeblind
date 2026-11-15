@@ -1,4 +1,4 @@
-export type NavId = "tech" | "timeline" | "concerts" | "travel" | "status";
+export type NavId = "tech" | "timeline" | "projects" | "travel" | "status";
 
 export interface NavItem {
   id: NavId;
@@ -30,10 +30,10 @@ export const NAV_ITEMS: NavItem[] = [
     icon: "git",
   },
   {
-    id: "concerts",
-    label: "Live Music",
-    keywords: ["live", "concerts", "music", "gigs", "shows", "tickets", "wallet", "票夹"],
-    icon: "music",
+    id: "projects",
+    label: "Portfolio",
+    keywords: ["projects", "portfolio", "wyckoff", "食读", "lunaria", "作品集", "作品"],
+    icon: "terminal",
   },
   {
     id: "travel",

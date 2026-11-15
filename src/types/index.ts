@@ -95,3 +95,12 @@ export interface TravelData {
   home: { name: string; lat: number; lng: number };
   places: Place[];
 }
+
+export interface PortfolioProject {
+  name: string;
+  url: string;
+  category: Localized;
+  description: Localized;
+  tags: string[];
+  color: string;
+}

@@ -1,0 +1,2 @@
+# Resume-aligned portfolio refresh
+Approved by the user on 2026-11-15. Preserve the dark bento design and English, Chinese and Japanese locales. Use the resume supplied in chat for name, Tokyo location, full-stack / AI application positioning, skills, Meituan experience and education. Replace the concert card and navigation with EasyWyckoff, 食读 and Lunaria links and accurate descriptions. Keep concert source/data for later restoration. Update page metadata. Build, check desktop/mobile and locale navigation, then publish to the existing personal-homepage project.

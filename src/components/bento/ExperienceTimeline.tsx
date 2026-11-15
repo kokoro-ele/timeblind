@@ -45,7 +45,7 @@ export default function ExperienceTimeline() {
                     selected ? "text-accent" : "text-muted"
                   }`}
                 >
-                  {commit.hash} · {commit.date.slice(0, 7)}
+                  {commit.date}
                 </span>
                 <HoverTip
                   tip={branchTip}

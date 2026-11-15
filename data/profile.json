@@ -1,101 +1,97 @@
 {
-  "name": "Welcome !",
+  "name": "Zetian Yu",
   "handle": "@timeblind",
   "role": {
-    "en": "Full-Stack Engineer",
-    "zh": "全栈工程师",
-    "ja": "フルスタックエンジニア"
+    "en": "Full-stack / AI Application Engineer",
+    "zh": "全栈 / AI 应用工程师",
+    "ja": "フルスタック / AIアプリケーションエンジニア"
   },
   "tagline": {
-    "en": "Building fast, weird, well-crafted software.",
-    "zh": "打造快速、奇趣、精雕细琢的软件。",
-    "ja": "速くて、風変わりで、丁寧に作り込んだソフトウェアを。"
+    "en": "From complex workflows to useful AI products.",
+    "zh": "将复杂业务流程，做成实用的 AI 产品。",
+    "ja": "複雑な業務フローを、役立つAIプロダクトへ。"
   },
   "location": {
-    "en": "Nanjing, CN",
-    "zh": "中国 · 南京",
-    "ja": "中国 · 南京"
+    "en": "Tokyo, JP",
+    "zh": "日本 · 东京",
+    "ja": "日本 · 東京"
   },
-  "lat": 32.0603,
-  "lng": 118.7969,
-  "timezone": "Asia/Shanghai",
+  "lat": 35.6762,
+  "lng": 139.6503,
+  "timezone": "Asia/Tokyo",
   "status": "ACTIVE",
   "availability": "OPEN_TO_WORK",
   "bio": {
-    "en": "Engineer who likes shaving milliseconds off the hot path and pixels off the UI. Comfortable from kernel-ish backend internals up to GPU shaders in the browser.",
-    "zh": "热衷于在热点路径上抠掉每一毫秒、在 UI 上抠掉每一像素的工程师。从偏内核的后端底层,到浏览器里的 GPU 着色器,都能游刃有余。",
-    "ja": "ホットパスからミリ秒を、UI からピクセルを削り取るのが好きなエンジニア。カーネル寄りのバックエンド内部から、ブラウザの GPU シェーダーまで対応できます。"
+    "en": "Previously built merchant-advertising products at Meituan. Now building end-to-end AI applications, from interactive interfaces and agents to persistent workspaces and payments. Open to opportunities in Tokyo; work visa sponsorship required.",
+    "zh": "曾在美团负责商家广告产品前端交付。现在独立构建 AI 应用，覆盖交互界面、Agent、持久化工作空间与支付。寻求东京工作机会，需要工作签证支持。",
+    "ja": "美団で加盟店向け広告プロダクトのフロントエンド開発を担当。現在はUI、AIエージェント、永続ワークスペース、決済まで一貫して開発。東京での就職を希望し、就労ビザのサポートが必要です。"
   },
   "github": "https://github.com/kokoro-ele",
   "email": "elekokoro@gmail.com",
   "stack": [
     {
-      "name": "TypeScript",
+      "name": "TypeScript / JavaScript",
       "category": "lang",
-      "level": 90,
-      "years": 2
+      "level": 0,
+      "years": 0
     },
     {
-      "name": "Python",
-      "category": "lang",
-      "level": 80,
-      "years": 3
-    },
-    {
-      "name": "React / Next.js",
+      "name": "React / Next.js / Tailwind CSS",
       "category": "frontend",
-      "level": 95,
-      "years": 3
+      "level": 0,
+      "years": 0
     },
     {
-      "name": "WebGL / Three.js",
+      "name": "Zustand / Redux / Formily",
       "category": "frontend",
-      "level": 20,
-      "years": 1
+      "level": 0,
+      "years": 0
     },
     {
-      "name": "Node.js",
+      "name": "Node.js / Hono / REST APIs",
       "category": "backend",
-      "level": 30,
-      "years": 1
+      "level": 0,
+      "years": 0
     },
     {
-      "name": "PostgreSQL",
+      "name": "PostgreSQL / SQLite / Zod",
       "category": "data",
-      "level": 10,
+      "level": 0,
       "years": 0
     },
     {
-      "name": "Redis",
-      "category": "data",
-      "level": 10,
-      "years": 0
-    },
-    {
-      "name": "Kubernetes",
+      "name": "Git / Docker / Vercel / Stripe",
       "category": "infra",
-      "level": 10,
+      "level": 0,
       "years": 0
     },
     {
-      "name": "Docker",
+      "name": "Vite / Vitest / Jest / CI/CD",
       "category": "infra",
-      "level": 30,
-      "years": 0.5
+      "level": 0,
+      "years": 0
+    },
+    {
+      "name": "AWS / GCP",
+      "category": "infra",
+      "level": 0,
+      "years": 0
+    },
+    {
+      "name": "Codex / Claude Code / Herdr",
+      "category": "infra",
+      "level": 0,
+      "years": 0
     }
   ],
   "metrics": [
     {
-      "label": "Passion",
-      "value": "99.98%"
+      "label": "IELTS",
+      "value": "7.0"
     },
     {
-      "label": "Coffee/day",
-      "value": "2"
-    },
-    {
-      "label": "prod incidents",
-      "value": "0 "
+      "label": "JLPT",
+      "value": "N2"
     }
   ],
   "socials": [

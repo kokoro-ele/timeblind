@@ -5,14 +5,14 @@ import "./globals.css";
 import { LocaleProvider } from "@/i18n/LocaleProvider";
 
 export const metadata: Metadata = {
-  title: "timeblind // cyber resume",
+  title: "Zetian Yu // Full-stack & AI",
   description:
-    "A Modern Cyber-Geek personal profile. Tech stack, experience timeline, live concerts and travel footprints.",
-  metadataBase: new URL("https://timeblind.dev"),
+    "Tokyo-based Full-stack / AI Application Engineer. Experience at Meituan and selected projects: EasyWyckoff, 食读 and Lunaria.",
+  metadataBase: new URL("https://timeblind.xyz"),
   openGraph: {
-    title: "timeblind // cyber resume",
+    title: "Zetian Yu // Full-stack & AI",
     description:
-      "A Modern Cyber-Geek personal profile built with Next.js, Three.js and a lot of caffeine.",
+      "Zetian Yu — Full-stack / AI Application Engineer. Explore EasyWyckoff, 食读 and Lunaria.",
     type: "website",
   },
 };

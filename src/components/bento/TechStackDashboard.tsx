@@ -13,26 +13,6 @@ const CATEGORY_COLOR: Record<string, string> = {
   infra: "#f472b6",
 };
 
-function Bar({ level, color }: { level: number; color: string }) {
-  const cells = 22;
-  const filled = Math.round((level / 100) * cells);
-  return (
-    <span className="mono text-[11px] leading-none tracking-tighter">
-      <span className="text-muted">[</span>
-      {Array.from({ length: cells }).map((_, i) => (
-        <span
-          key={i}
-          style={{ color: i < filled ? color : "transparent" }}
-          className={i < filled ? "" : "text-white/8"}
-        >
-          {i < filled ? "|" : "."}
-        </span>
-      ))}
-      <span className="text-muted">]</span>
-    </span>
-  );
-}
-
 export default function TechStackDashboard() {
   const { locale, t } = useLocale();
   return (
@@ -65,19 +45,18 @@ export default function TechStackDashboard() {
           return (
             <div
               key={s.name}
-              className="grid grid-cols-[1.1fr_auto_2.4rem] items-center gap-3 rounded px-1 py-0.5 hover:bg-white/[0.03]"
+              className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 rounded px-1 py-0.5 hover:bg-white/[0.03]"
             >
-              <span className="truncate text-xs text-titanium">{s.name}</span>
-              <Bar level={s.level} color={color} />
+              <span className="min-w-0 text-xs text-titanium">{s.name}</span>
               <span className="mono text-right text-[11px]" style={{ color }}>
-                {s.level}%
+                {s.category}
               </span>
             </div>
           );
         })}
       </div>
 
-      <div className="mono flex items-center justify-between border-t border-white/10 pt-2 text-[10px] text-muted">
+      <div className="mono flex flex-wrap gap-2 items-center justify-between border-t border-white/10 pt-2 text-[10px] text-muted">
         <span>{loc(profile.role, locale)}</span>
         <span className="text-accent">{profile.availability}</span>
       </div>

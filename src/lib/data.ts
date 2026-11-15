@@ -1,3 +1,5 @@
+import projectsJson from "@data/projects.json";
+import type { PortfolioProject } from "@/types";
 import profileJson from "@data/profile.json";
 import timelineJson from "@data/timeline.json";
 import concertsJson from "@data/concerts.json";
@@ -36,3 +38,5 @@ export function getConcerts(): Concert[] {
 export function getTravel(): TravelData {
   return travel;
 }
+
+export const projects: PortfolioProject[] = projectsJson;

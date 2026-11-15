@@ -11,7 +11,7 @@ export interface Messages {
   nav: {
     tech: string;
     timeline: string;
-    concerts: string;
+    projects: string;
     travel: string;
     status: string;
     github: string;
@@ -20,7 +20,7 @@ export interface Messages {
     tech: string;
     status: string;
     timeline: string;
-    concerts: string;
+    projects: string;
     travel: string;
   };
   tech: {
@@ -71,7 +71,7 @@ export interface Messages {
 const en: Messages = {
   command: {
     cta: "Press {key} to explore...",
-    placeholder: "Type a destination — tech, live, travel...",
+    placeholder: "Type a destination — tech, projects, travel...",
     empty: "no route found :: 404",
     navigate: "Navigate",
     links: "Links",
@@ -79,7 +79,7 @@ const en: Messages = {
   nav: {
     tech: "Tech Stack",
     timeline: "Experience",
-    concerts: "Ticket Wallet",
+    projects: "Portfolio",
     travel: "Footprints",
     status: "System State",
     github: "GitHub",
@@ -88,7 +88,7 @@ const en: Messages = {
     tech: "System Console · Tech Stack",
     status: "System State",
     timeline: "Experience · git log",
-    concerts: "Ticket Wallet · Live",
+    projects: "Selected Projects",
     travel: "Travel · Footprints Radar",
   },
   tech: {
@@ -139,7 +139,7 @@ const en: Messages = {
 const zh: Messages = {
   command: {
     cta: "按 {key} 开始探索...",
-    placeholder: "输入目的地 —— tech、live、travel...",
+    placeholder: "输入目的地 —— tech、projects、travel...",
     empty: "未找到路由 :: 404",
     navigate: "导航",
     links: "链接",
@@ -147,7 +147,7 @@ const zh: Messages = {
   nav: {
     tech: "技术栈",
     timeline: "履历",
-    concerts: "票夹",
+    projects: "作品集",
     travel: "足迹",
     status: "系统状态",
     github: "GitHub",
@@ -156,7 +156,7 @@ const zh: Messages = {
     tech: "系统控制台 · 技术栈",
     status: "系统状态",
     timeline: "履历 · git log",
-    concerts: "票夹 · Live",
+    projects: "精选作品",
     travel: "旅行 · 足迹雷达",
   },
   tech: {
@@ -207,7 +207,7 @@ const zh: Messages = {
 const ja: Messages = {
   command: {
     cta: "{key} を押して探索...",
-    placeholder: "行き先を入力 — tech、live、travel...",
+    placeholder: "行き先を入力 — tech、projects、travel...",
     empty: "ルートが見つかりません :: 404",
     navigate: "ナビゲーション",
     links: "リンク",
@@ -215,7 +215,7 @@ const ja: Messages = {
   nav: {
     tech: "技術スタック",
     timeline: "経歴",
-    concerts: "チケットホルダー",
+    projects: "作品",
     travel: "足跡",
     status: "システム状態",
     github: "GitHub",
@@ -224,7 +224,7 @@ const ja: Messages = {
     tech: "システムコンソール · 技術スタック",
     status: "システム状態",
     timeline: "経歴 · git log",
-    concerts: "チケットホルダー · Live",
+    projects: "制作プロジェクト",
     travel: "旅 · 足跡レーダー",
   },
   tech: {
