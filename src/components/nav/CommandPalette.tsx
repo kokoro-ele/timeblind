@@ -11,9 +11,12 @@ import { Icon } from "./Icons";
 export default function CommandPalette() {
   const t = useT();
   const [open, setOpen] = useState(false);
-  const isMac =
-    typeof navigator !== "undefined" &&
-    /mac|iphone|ipad/i.test(navigator.platform || navigator.userAgent);
+  // decided after hydration: Node also defines `navigator`, so the prerendered
+  // HTML would otherwise carry the build machine's platform
+  const [isMac, setIsMac] = useState(true);
+  useEffect(() => {
+    setIsMac(/mac|iphone|ipad/i.test(navigator.platform || navigator.userAgent));
+  }, []);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
