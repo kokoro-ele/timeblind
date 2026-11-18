@@ -2,15 +2,18 @@
 
 import { useCallback, useEffect, useRef, useState, type PointerEvent } from "react";
 import type { Player } from "@livliv-dev/player";
+import type { Speech } from "@livliv-dev/player/voice";
 import companion from "@data/companion.json";
+import voiceClips from "@data/companion-voice.json";
 import { useLocale } from "@/i18n/LocaleProvider";
-import { loc, type Localized } from "@/i18n/config";
+import { loc, type Locale, type Localized } from "@/i18n/config";
 
 type Line = Localized<string>;
 type LineKey = Exclude<keyof typeof companion.lines, "sections">;
 type SectionId = keyof typeof companion.lines.sections;
 
 const STORAGE_KEY = "timeblind.companion.hidden";
+const VOICE_KEY = "timeblind.companion.voice";
 const IDLE_MS = 25_000;
 const SECTION_COOLDOWN_MS = 2_600;
 const BUBBLE_HOLD_MS = 5_500;
@@ -51,6 +54,17 @@ export default function Companion() {
   const lastSpokeRef = useRef(0);
   const next = useRotation();
 
+  // voice: pre-rendered clips (scripts/gen-voice.py) played through the player's lip sync
+  const speechRef = useRef<Speech | null>(null);
+  const [speechReady, setSpeechReady] = useState(false);
+  const [voiceOn, setVoiceOn] = useState(false);
+  const voiceOnRef = useRef(false);
+  const unlockedRef = useRef(false);
+  const clipRef = useRef(0);
+  const [speaking, setSpeaking] = useState(false);
+  const localeNowRef = useRef<Locale>(locale);
+  localeNowRef.current = locale;
+
   const awayRef = useRef(false);
   const pokesRef = useRef<number[]>([]);
   const sectionRef = useRef<string | null>(null);
@@ -59,17 +73,35 @@ export default function Companion() {
 
   const text = line ? loc(line, locale) : "";
 
+  const speak = useCallback((l: Line) => {
+    const speech = speechRef.current;
+    if (!speech) return;
+    const id = ++clipRef.current;
+    speech.stop();
+    setSpeaking(false);
+    if (!voiceOnRef.current || !unlockedRef.current) return;
+    const lang = localeNowRef.current;
+    const url = (voiceClips as Record<string, Record<string, string>>)[lang]?.[loc(l, lang)];
+    if (!url) return;
+    setSpeaking(true);
+    const done = () => {
+      if (clipRef.current === id) setSpeaking(false);
+    };
+    speech.say(url, { onEnd: done, onFail: done });
+  }, []);
+
   const say = useCallback(
     (l: Line, opts: { force?: boolean } = {}) => {
       const now = performance.now();
       if (!opts.force && now - lastSpokeRef.current < SECTION_COOLDOWN_MS) return false;
       lastSpokeRef.current = now;
+      speak(l);
       setLine(l);
       setTyped(prefersReducedMotion() ? Infinity : 0);
       setBubbleOn(true);
       return true;
     },
-    [],
+    [speak],
   );
 
   const sayKey = useCallback(
@@ -86,6 +118,7 @@ export default function Companion() {
   }, []);
 
   const setHiddenPersist = (h: boolean) => {
+    if (h) speechRef.current?.stop();
     setHidden(h);
     try {
       localStorage.setItem(STORAGE_KEY, h ? "1" : "0");
@@ -112,7 +145,7 @@ export default function Companion() {
       // fake lip sync: while the bubble is typing, the mouth flaps with the text
       player.use({
         update(frame) {
-          if (!talkingRef.current) return;
+          if (!talkingRef.current || speechRef.current?.busy) return;
           const t = frame.time;
           frame.params.mouthOpen =
             0.15 + 0.55 * Math.abs(Math.sin(t * 17)) * (0.6 + 0.4 * Math.sin(t * 5.3));
@@ -124,6 +157,12 @@ export default function Companion() {
         await player.load(companion.model, { poster: companion.cover });
         if (cancelled) return;
         setReady(true);
+        const { createSpeech } = await import("@livliv-dev/player/voice");
+        if (cancelled) return;
+        const speech = createSpeech(player, { motion: 0.8 });
+        speech.volume = 0.9;
+        speechRef.current = speech;
+        setSpeechReady(true);
       } catch (e) {
         if ((e as Error).name !== "AbortError") {
           console.warn("[companion]", e);
@@ -134,6 +173,8 @@ export default function Companion() {
 
     return () => {
       cancelled = true;
+      speechRef.current?.dispose();
+      speechRef.current = null;
       player?.dispose({ release: true });
       playerRef.current = null;
     };
@@ -169,9 +210,55 @@ export default function Companion() {
       return () => clearTimeout(id);
     }
     talkingRef.current = false;
+    if (speaking) return;
     const id = setTimeout(() => setBubbleOn(false), BUBBLE_HOLD_MS);
     return () => clearTimeout(id);
-  }, [bubbleOn, typed, text]);
+  }, [bubbleOn, typed, text, speaking]);
+
+  // ---- voice on / off --------------------------------------------------------
+  // the preference is remembered, but browsers only allow sound after a gesture on
+  // each visit, so a returning visitor's first click or key press unlocks it
+  useEffect(() => {
+    if (!speechReady) return;
+    let stored = false;
+    try {
+      stored = localStorage.getItem(VOICE_KEY) === "1";
+    } catch {}
+    if (!stored) return;
+    voiceOnRef.current = true;
+    setVoiceOn(true);
+    const unlock = () => {
+      speechRef.current?.unlock();
+      unlockedRef.current = true;
+    };
+    window.addEventListener("pointerdown", unlock, { capture: true, once: true });
+    window.addEventListener("keydown", unlock, { capture: true, once: true });
+    return () => {
+      window.removeEventListener("pointerdown", unlock, { capture: true });
+      window.removeEventListener("keydown", unlock, { capture: true });
+    };
+  }, [speechReady]);
+
+  const toggleVoice = () => {
+    const speech = speechRef.current;
+    if (!speech) return;
+    const on = !voiceOnRef.current;
+    voiceOnRef.current = on;
+    setVoiceOn(on);
+    try {
+      localStorage.setItem(VOICE_KEY, on ? "1" : "0");
+    } catch {}
+    if (on) {
+      speech.unlock();
+      unlockedRef.current = true;
+      playerRef.current?.act("nod");
+      sayKey("voiceOn", { force: true });
+    } else {
+      clipRef.current++;
+      speech.stop();
+      setSpeaking(false);
+    }
+  };
 
   // ---- reacting to the page ----------------------------------------------
   useEffect(() => {
@@ -327,17 +414,26 @@ export default function Companion() {
       >
         {/* speech bubble */}
         <div
-          role="status"
-          aria-live="polite"
           className={`glass mono absolute bottom-[78%] bg-[#060608]/95! right-[72%] w-[min(240px,60vw)] rounded-xl rounded-br-sm px-3 py-2.5 text-[11px] leading-relaxed text-titanium transition-[opacity,transform] duration-300 sm:right-[80%] ${
-            bubbleOn && !hidden ? "translate-y-0 opacity-100" : "translate-y-1 opacity-0"
+            bubbleOn && !hidden
+              ? "pointer-events-auto translate-y-0 opacity-100"
+              : "translate-y-1 opacity-0"
           }`}
         >
           <div className="mb-1 flex items-center gap-1.5 text-[9px] uppercase tracking-[0.2em] text-accent">
-            <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-accent shadow-[0_0_6px_#00ffcc]" />
-            {companion.name}.exe
+            <span
+              className={`inline-block h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_6px_#00ffcc] ${
+                speaking ? "animate-ping" : "animate-pulse"
+              }`}
+            />
+            <span className="flex-1">{companion.name}.exe</span>
+            {speechReady ? (
+              <VoiceToggle on={voiceOn} onClick={toggleVoice} hint />
+            ) : null}
           </div>
-          <span>{text.slice(0, typed)}</span>
+          <span role="status" aria-live="polite">
+            {text.slice(0, typed)}
+          </span>
           {typed < text.length ? <span className="caret" /> : null}
         </div>
 
@@ -391,6 +487,7 @@ export default function Companion() {
             >
               {companion.credit.label}
             </a>
+            {speechReady ? <VoiceToggle on={voiceOn} onClick={toggleVoice} /> : null}
             <button
               type="button"
               onClick={() => setHiddenPersist(true)}
@@ -416,5 +513,43 @@ export default function Companion() {
         {companion.name}.exe
       </button>
     </>
+  );
+}
+
+function VoiceToggle({
+  on,
+  onClick,
+  hint = false,
+}: {
+  on: boolean;
+  onClick: () => void;
+  hint?: boolean;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-pressed={on}
+      aria-label={on ? "Mute voice" : "Turn on voice"}
+      title={on ? "Mute voice" : "Turn on voice"}
+      className={`mono flex items-center gap-1 rounded border px-1.5 py-0.5 text-[9px] normal-case tracking-normal transition-colors ${
+        on
+          ? "border-accent/40 bg-accent/10 text-accent"
+          : "border-white/10 bg-black/70 text-muted hover:border-accent/40 hover:text-accent"
+      }`}
+    >
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+        <path d="M11 5 6 9H2v6h4l5 4V5z" fill="currentColor" />
+        {on ? (
+          <>
+            <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+            <path d="M19 5a10 10 0 0 1 0 14" />
+          </>
+        ) : (
+          <path d="m22 9-6 6m0-6 6 6" />
+        )}
+      </svg>
+      {hint && !on ? "voice" : null}
+    </button>
   );
 }

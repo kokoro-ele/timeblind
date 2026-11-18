@@ -28,6 +28,19 @@ data/
 └── travel.json     # travel footprints (lat/lng + notes)
 ```
 
+### Companion voice
+
+Yuriko's lines live in `data/companion.json`. Their voice is pre-rendered locally with Kokoro-82M
+(Apache-2.0) and shipped as static mp3s, so the site stays static and holds no API keys. After editing a
+line, re-render (only changed lines are rendered):
+
+```bash
+source ~/.venvs/tts/bin/activate && python scripts/gen-voice.py
+```
+
+A line can carry `"say": { "zh": "..." }` when the spoken text should differ from the shown text
+(names, English words in ja/zh), or `"say": false` to stay silent. Setup is in the script's header.
+
 ### Localized fields
 
 Any human-readable field can be either a plain string or a per-locale object that falls back to English:

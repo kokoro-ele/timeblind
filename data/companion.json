@@ -2,13 +2,30 @@
   "name": "yuriko",
   "model": "/companion/yuriko.livliv",
   "cover": "/companion/cover.webp",
-  "credit": { "label": "character · livliv.ai", "url": "https://livliv.ai" },
+  "credit": {
+    "label": "character · livliv.ai",
+    "url": "https://livliv.ai"
+  },
   "lines": {
     "greet": [
       {
         "en": "Hi! I'm Yuriko, Zetian's on-site guide. Move your cursor, I'm watching~",
         "zh": "你好！我是百合子，Zetian 的站内向导。动动鼠标，我在看着哦~",
-        "ja": "こんにちは！ゼティアンの案内役、ゆりこです。カーソルを動かしてみて、ちゃんと見てるよ〜"
+        "ja": "こんにちは！ゼティアンの案内役、ゆりこです。カーソルを動かしてみて、ちゃんと見てるよ〜",
+        "say": {
+          "en": "Hi! I'm Yuri-ko, Zeh-tyen's on-site guide. Move your cursor, I'm watching!",
+          "zh": "你好！我是百合子，这个网站的向导。动动鼠标，我在看着哦。"
+        }
+      }
+    ],
+    "voiceOn": [
+      {
+        "en": "Can you hear me now? Nice to meet you!",
+        "zh": "现在能听到我的声音了吗？请多关照！",
+        "ja": "声、聞こえてる？よろしくね！",
+        "say": {
+          "ja": "声、聞こえてる？よろしくね！"
+        }
       }
     ],
     "sections": {
@@ -16,12 +33,20 @@
         {
           "en": "Those particles run on Canvas 2D at 60fps. Try sweeping your mouse through them!",
           "zh": "这些粒子是 Canvas 2D 跑的，60 帧。用鼠标扫一下试试！",
-          "ja": "このパーティクルは Canvas 2D で 60fps。マウスでなぞってみて！"
+          "ja": "このパーティクルは Canvas 2D で 60fps。マウスでなぞってみて！",
+          "say": {
+            "ja": "このパーティクルは、キャンバスツーディーで、ろくじゅうエフピーエス。マウスでなぞってみて！",
+            "zh": "这些粒子是用二维画布实时绘制的，每秒六十帧。用鼠标扫一下试试！"
+          }
         },
         {
           "en": "TypeScript, React, Next.js… he lives in this stack.",
           "zh": "TypeScript、React、Next.js……他就住在这套技术栈里。",
-          "ja": "TypeScript、React、Next.js…この技術スタックが彼の住処。"
+          "ja": "TypeScript、React、Next.js…この技術スタックが彼の住処。",
+          "say": {
+            "ja": "タイプスクリプト、リアクト、ネクストジェイエス…この技術スタックが彼の住処。",
+            "zh": "这一整套前端技术栈，就是他的家。"
+          }
         }
       ],
       "status": [
@@ -33,19 +58,33 @@
         {
           "en": "Psst, open DevTools and type hire.",
           "zh": "悄悄说：打开控制台，输入 hire。",
-          "ja": "こっそり：DevTools を開いて hire って打ってみて。"
+          "ja": "こっそり：DevTools を開いて hire って打ってみて。",
+          "say": {
+            "ja": "こっそり：デブツールを開いて、ハイヤーって打ってみて。",
+            "en": "Psst. Open dev tools, and type: hire.",
+            "zh": "悄悄说：打开浏览器控制台，有彩蛋哦。"
+          }
         }
       ],
       "timeline": [
         {
           "en": "His career, rendered as a git log. Click a commit to decode it.",
           "zh": "他的履历，用 git log 的方式呈现。点一个 commit 看看。",
-          "ja": "経歴を git log で表示してるの。コミットをクリックしてみて。"
+          "ja": "経歴を git log で表示してるの。コミットをクリックしてみて。",
+          "say": {
+            "ja": "経歴を、ギットログで表示してるの。コミットをクリックしてみて。",
+            "zh": "他的履历，用代码提交记录的方式呈现。点一条记录看看。"
+          }
         },
         {
           "en": "Ad products at Meituan, then going full-stack with AI.",
           "zh": "在美团做商家广告产品，然后转向全栈 AI。",
-          "ja": "美団で広告プロダクト、そこから AI のフルスタックへ。"
+          "ja": "美団で広告プロダクト、そこから AI のフルスタックへ。",
+          "say": {
+            "ja": "メイトゥアンで広告プロダクト、そこからエーアイのフルスタックへ。",
+            "en": "Ad products at May-twon, then going full-stack with A.I.",
+            "zh": "在美团做商家广告产品，然后转向全栈人工智能应用。"
+          }
         }
       ],
       "projects": [
@@ -57,7 +96,12 @@
         {
           "en": "EasyWyckoff, 食读, Lunaria: built end to end, UI to payments.",
           "zh": "EasyWyckoff、食读、Lunaria：从界面到支付，全部一手包办。",
-          "ja": "EasyWyckoff、食读、Lunaria。UI から決済まで全部ひとりで。"
+          "ja": "EasyWyckoff、食读、Lunaria。UI から決済まで全部ひとりで。",
+          "say": {
+            "en": "Easy Wyckoff, Shee-doo, and Lunaria: built end to end, from UI to payments.",
+            "ja": "イージーワイコフ、シードゥ、ルナリア。ユーアイから決済まで、全部ひとりで。",
+            "zh": "伊兹威科夫、食读、露娜莉亚：从界面到支付，全部一手包办。"
+          }
         }
       ],
       "concerts": [
@@ -69,7 +113,11 @@
         {
           "en": "Hitorie, Miku, … he really does go to every show.",
           "zh": "Hitorie、初音未来……他是真的每场都去。",
-          "ja": "ヒトリエ、ミク…本当に全部のライブに行ってるんだよ。"
+          "ja": "ヒトリエ、ミク…本当に全部のライブに行ってるんだよ。",
+          "say": {
+            "en": "Hitorie, Miku… he really does go to every show.",
+            "zh": "初音未来，还有好多乐队……他是真的每场都去。"
+          }
         }
       ],
       "travel": [
@@ -81,14 +129,30 @@
       ]
     },
     "poke": [
-      { "en": "Eek! My hair!", "zh": "呀！头发！", "ja": "ひゃっ！髪が！" },
-      { "en": "Hehe, that tickles.", "zh": "嘿嘿，好痒。", "ja": "えへへ、くすぐったい。" },
+      {
+        "en": "Eek! My hair!",
+        "zh": "呀！头发！",
+        "ja": "ひゃっ！髪が！"
+      },
+      {
+        "en": "Hehe, that tickles.",
+        "zh": "嘿嘿，好痒。",
+        "ja": "えへへ、くすぐったい。"
+      },
       {
         "en": "Yes, the hair physics are real-time.",
         "zh": "对，头发物理是实时计算的。",
         "ja": "そう、髪の揺れはリアルタイム計算。"
       },
-      { "en": "Boop!", "zh": "戳！", "ja": "ぷにっ！" }
+      {
+        "en": "Boop!",
+        "zh": "戳！",
+        "ja": "ぷにっ！",
+        "say": {
+          "ja": "ぷにぷにっ！",
+          "zh": "戳戳！"
+        }
+      }
     ],
     "annoyed": [
       {
@@ -97,7 +161,14 @@
         "ja": "もう、つつかないで！プロジェクトでも見てきて！"
       }
     ],
-    "away": [{ "en": "zzz…", "zh": "zzz……", "ja": "すやぁ…" }],
+    "away": [
+      {
+        "en": "zzz…",
+        "zh": "zzz……",
+        "ja": "すやぁ…",
+        "say": false
+      }
+    ],
     "back": [
       {
         "en": "Huh? Oh! Welcome back~",
@@ -109,7 +180,11 @@
       {
         "en": "Command palette! Try typing \"live\".",
         "zh": "命令面板！试试输入 \"live\"。",
-        "ja": "コマンドパレット！\"live\" って打ってみて。"
+        "ja": "コマンドパレット！\"live\" って打ってみて。",
+        "say": {
+          "ja": "コマンドパレット！ライブって打ってみて。",
+          "zh": "命令面板！输入关键词，就能直接跳转哦。"
+        }
       }
     ],
     "locale": [
@@ -123,7 +198,11 @@
       {
         "en": "You made it to the bottom! Want to build something together? See GitHub in the dock.",
         "zh": "你看到底啦！要一起做点什么吗？GitHub 在下方 Dock 里。",
-        "ja": "最後まで見てくれてありがとう！一緒に何か作りませんか？GitHub はドックにあるよ。"
+        "ja": "最後まで見てくれてありがとう！一緒に何か作りませんか？GitHub はドックにあるよ。",
+        "say": {
+          "ja": "最後まで見てくれてありがとう！一緒に何か作りませんか？ギットハブはドックにあるよ。",
+          "zh": "你看到底啦！要一起做点什么吗？下方的工具栏里，有他的代码仓库。"
+        }
       }
     ]
   }
