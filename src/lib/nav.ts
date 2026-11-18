@@ -1,4 +1,10 @@
-export type NavId = "tech" | "timeline" | "projects" | "travel" | "status";
+export type NavId =
+  | "tech"
+  | "timeline"
+  | "projects"
+  | "concerts"
+  | "travel"
+  | "status";
 
 export interface NavItem {
   id: NavId;
@@ -36,6 +42,12 @@ export const NAV_ITEMS: NavItem[] = [
     icon: "terminal",
   },
   {
+    id: "concerts",
+    label: "Live Music",
+    keywords: ["live", "concerts", "music", "gigs", "shows", "tickets", "wallet", "票夹", "チケット"],
+    icon: "music",
+  },
+  {
     id: "travel",
     label: "Footprints",
     keywords: ["travel", "footprints", "globe", "map", "places", "world"],
@@ -52,6 +64,7 @@ export const NAV_ITEMS: NavItem[] = [
 export function focusSection(id: string) {
   const el = document.querySelector<HTMLElement>(`[data-bento="${id}"]`);
   if (!el) return;
+  window.dispatchEvent(new CustomEvent("timeblind:focus", { detail: id }));
   el.scrollIntoView({ behavior: "smooth", block: "center" });
   // brief highlight ping
   el.animate(

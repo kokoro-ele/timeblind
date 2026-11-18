@@ -26,6 +26,10 @@ export default function CommandPalette() {
     return () => document.removeEventListener("keydown", onKey);
   }, []);
 
+  useEffect(() => {
+    window.dispatchEvent(new CustomEvent("timeblind:palette", { detail: open }));
+  }, [open]);
+
   const run = useCallback((fn: () => void) => {
     setOpen(false);
     // wait for the dialog to unmount before scrolling

@@ -7,6 +7,8 @@ import FloatingDock from "@/components/nav/FloatingDock";
 import TechStackDashboard from "@/components/bento/TechStackDashboard";
 import ExperienceTimeline from "@/components/bento/ExperienceTimeline";
 import Portfolio from "@/components/bento/Portfolio";
+import TicketWallet from "@/components/bento/TicketWallet";
+import Companion from "@/components/companion/Companion";
 import TravelGlobe from "@/components/bento/TravelGlobe";
 import SystemState from "@/components/bento/SystemState";
 import { profile } from "@/lib/data";
@@ -49,7 +51,7 @@ export default function Home() {
           <BentoCard
             id="status"
             title={t.cards.status}
-            tag="05 // now"
+            tag="06 // now"
             className="sm:col-span-2 lg:col-span-2"
           >
             <SystemState />
@@ -75,10 +77,20 @@ export default function Home() {
           </BentoCard>
 
           <BentoCard
+            id="concerts"
+            title={t.cards.concerts}
+            tag="04 // tickets"
+            accent="#f472b6"
+            className="sm:col-span-2 lg:col-span-3"
+          >
+            <TicketWallet />
+          </BentoCard>
+
+          <BentoCard
             id="travel"
             title={t.cards.travel}
-            tag="04 // globe"
-            className="sm:col-span-2 lg:col-span-6"
+            tag="05 // globe"
+            className="sm:col-span-2 lg:col-span-3"
             bleed
           >
             <TravelGlobe />
@@ -92,6 +104,7 @@ export default function Home() {
       </main>
 
       <FloatingDock />
+      <Companion />
     </>
   );
 }

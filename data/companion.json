@@ -1,0 +1,130 @@
+{
+  "name": "yuriko",
+  "model": "/companion/yuriko.livliv",
+  "cover": "/companion/cover.webp",
+  "credit": { "label": "character · livliv.ai", "url": "https://livliv.ai" },
+  "lines": {
+    "greet": [
+      {
+        "en": "Hi! I'm Yuriko, Zetian's on-site guide. Move your cursor, I'm watching~",
+        "zh": "你好！我是百合子，Zetian 的站内向导。动动鼠标，我在看着哦~",
+        "ja": "こんにちは！ゼティアンの案内役、ゆりこです。カーソルを動かしてみて、ちゃんと見てるよ〜"
+      }
+    ],
+    "sections": {
+      "tech": [
+        {
+          "en": "Those particles run on Canvas 2D at 60fps. Try sweeping your mouse through them!",
+          "zh": "这些粒子是 Canvas 2D 跑的，60 帧。用鼠标扫一下试试！",
+          "ja": "このパーティクルは Canvas 2D で 60fps。マウスでなぞってみて！"
+        },
+        {
+          "en": "TypeScript, React, Next.js… he lives in this stack.",
+          "zh": "TypeScript、React、Next.js……他就住在这套技术栈里。",
+          "ja": "TypeScript、React、Next.js…この技術スタックが彼の住処。"
+        }
+      ],
+      "status": [
+        {
+          "en": "Status: open to work in Tokyo. Hint, hint.",
+          "zh": "状态：正在东京找工作。懂的都懂~",
+          "ja": "ステータス：東京で求職中。ここ、大事なところです。"
+        },
+        {
+          "en": "Psst, open DevTools and type hire.",
+          "zh": "悄悄说：打开控制台，输入 hire。",
+          "ja": "こっそり：DevTools を開いて hire って打ってみて。"
+        }
+      ],
+      "timeline": [
+        {
+          "en": "His career, rendered as a git log. Click a commit to decode it.",
+          "zh": "他的履历，用 git log 的方式呈现。点一个 commit 看看。",
+          "ja": "経歴を git log で表示してるの。コミットをクリックしてみて。"
+        },
+        {
+          "en": "Ad products at Meituan, then going full-stack with AI.",
+          "zh": "在美团做商家广告产品，然后转向全栈 AI。",
+          "ja": "美団で広告プロダクト、そこから AI のフルスタックへ。"
+        }
+      ],
+      "projects": [
+        {
+          "en": "These are real, shipped products. Go ahead and open one!",
+          "zh": "这些都是真正上线的产品，点开看看吧！",
+          "ja": "どれも実際にリリースしたプロダクト。開いてみて！"
+        },
+        {
+          "en": "EasyWyckoff, 食读, Lunaria: built end to end, UI to payments.",
+          "zh": "EasyWyckoff、食读、Lunaria：从界面到支付，全部一手包办。",
+          "ja": "EasyWyckoff、食读、Lunaria。UI から決済まで全部ひとりで。"
+        }
+      ],
+      "concerts": [
+        {
+          "en": "His ticket stubs! Hover a poster to peek at it.",
+          "zh": "他的票根收藏！把鼠标放到海报上看看。",
+          "ja": "チケットの半券コレクション！ポスターにカーソルを乗せてみて。"
+        },
+        {
+          "en": "Hitorie, Miku, … he really does go to every show.",
+          "zh": "Hitorie、初音未来……他是真的每场都去。",
+          "ja": "ヒトリエ、ミク…本当に全部のライブに行ってるんだよ。"
+        }
+      ],
+      "travel": [
+        {
+          "en": "Drag the globe! Each ping is a place he's been.",
+          "zh": "拖动地球试试！每个光点都是他去过的地方。",
+          "ja": "地球儀をドラッグしてみて！光る点は行った場所だよ。"
+        }
+      ]
+    },
+    "poke": [
+      { "en": "Eek! My hair!", "zh": "呀！头发！", "ja": "ひゃっ！髪が！" },
+      { "en": "Hehe, that tickles.", "zh": "嘿嘿，好痒。", "ja": "えへへ、くすぐったい。" },
+      {
+        "en": "Yes, the hair physics are real-time.",
+        "zh": "对，头发物理是实时计算的。",
+        "ja": "そう、髪の揺れはリアルタイム計算。"
+      },
+      { "en": "Boop!", "zh": "戳！", "ja": "ぷにっ！" }
+    ],
+    "annoyed": [
+      {
+        "en": "Okay okay, stop poking me! Go look at the projects instead!",
+        "zh": "好啦好啦，别戳了！去看看作品吧！",
+        "ja": "もう、つつかないで！プロジェクトでも見てきて！"
+      }
+    ],
+    "away": [{ "en": "zzz…", "zh": "zzz……", "ja": "すやぁ…" }],
+    "back": [
+      {
+        "en": "Huh? Oh! Welcome back~",
+        "zh": "嗯？啊！欢迎回来~",
+        "ja": "はっ！おかえりなさい〜"
+      }
+    ],
+    "palette": [
+      {
+        "en": "Command palette! Try typing \"live\".",
+        "zh": "命令面板！试试输入 \"live\"。",
+        "ja": "コマンドパレット！\"live\" って打ってみて。"
+      }
+    ],
+    "locale": [
+      {
+        "en": "Switched to English!",
+        "zh": "切换到中文啦！",
+        "ja": "日本語に切り替えたよ！"
+      }
+    ],
+    "end": [
+      {
+        "en": "You made it to the bottom! Want to build something together? See GitHub in the dock.",
+        "zh": "你看到底啦！要一起做点什么吗？GitHub 在下方 Dock 里。",
+        "ja": "最後まで見てくれてありがとう！一緒に何か作りませんか？GitHub はドックにあるよ。"
+      }
+    ]
+  }
+}
