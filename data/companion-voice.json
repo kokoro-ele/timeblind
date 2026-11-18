@@ -1,6 +1,6 @@
 {
   "en": {
-    "Hi! I'm Yuriko, Zetian's on-site guide. Move your cursor, I'm watching~": "/companion/voice/en/da1f6e273c67.mp3",
+    "Welcome! I'm Yuriko, Zetian's on-site guide. Move your cursor, I'm watching~": "/companion/voice/en/86c578d8cf23.mp3",
     "Can you hear me now? Nice to meet you!": "/companion/voice/en/d185ab279c33.mp3",
     "Those particles run on Canvas 2D at 60fps. Try sweeping your mouse through them!": "/companion/voice/en/09b4baee399b.mp3",
     "TypeScript, React, Next.js… he lives in this stack.": "/companion/voice/en/84eec7ab3c22.mp3",
@@ -24,7 +24,7 @@
     "You made it to the bottom! Want to build something together? See GitHub in the dock.": "/companion/voice/en/1bdc6cf30051.mp3"
   },
   "ja": {
-    "こんにちは！ゼティアンの案内役、ゆりこです。カーソルを動かしてみて、ちゃんと見てるよ〜": "/companion/voice/ja/931f6c53de38.mp3",
+    "ようこそ！ゼティアンの案内役、ゆりこです。カーソルを動かしてみて、ちゃんと見てるよ〜": "/companion/voice/ja/0e6c019b1a6a.mp3",
     "声、聞こえてる？よろしくね！": "/companion/voice/ja/8e70c3a13d29.mp3",
     "このパーティクルは Canvas 2D で 60fps。マウスでなぞってみて！": "/companion/voice/ja/347756794e66.mp3",
     "TypeScript、React、Next.js…この技術スタックが彼の住処。": "/companion/voice/ja/0e10320c15f1.mp3",
@@ -48,7 +48,7 @@
     "最後まで見てくれてありがとう！一緒に何か作りませんか？GitHub はドックにあるよ。": "/companion/voice/ja/a5d1637e19b7.mp3"
   },
   "zh": {
-    "你好！我是百合子，Zetian 的站内向导。动动鼠标，我在看着哦~": "/companion/voice/zh/a90937595f5f.mp3",
+    "欢迎光临！我是百合子，Zetian 的站内向导。动动鼠标，我在看着哦~": "/companion/voice/zh/a9529145998e.mp3",
     "现在能听到我的声音了吗？请多关照！": "/companion/voice/zh/5c9d821409df.mp3",
     "这些粒子是 Canvas 2D 跑的，60 帧。用鼠标扫一下试试！": "/companion/voice/zh/073665c2252a.mp3",
     "TypeScript、React、Next.js……他就住在这套技术栈里。": "/companion/voice/zh/e63acfd1b381.mp3",

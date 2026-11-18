@@ -9,6 +9,7 @@ import ExperienceTimeline from "@/components/bento/ExperienceTimeline";
 import Portfolio from "@/components/bento/Portfolio";
 import TicketWallet from "@/components/bento/TicketWallet";
 import Companion from "@/components/companion/Companion";
+import LensIntro from "@/components/intro/LensIntro";
 import TravelGlobe from "@/components/bento/TravelGlobe";
 import SystemState from "@/components/bento/SystemState";
 import { profile } from "@/lib/data";
@@ -105,6 +106,7 @@ export default function Home() {
 
       <FloatingDock />
       <Companion />
+      <LensIntro />
     </>
   );
 }

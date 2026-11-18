@@ -1,6 +1,11 @@
 import type { Locale } from "./config";
 
 export interface Messages {
+  intro: {
+    loading: string;
+    enter: string;
+    hint: string;
+  };
   command: {
     cta: string; // uses {key}
     placeholder: string;
@@ -71,6 +76,11 @@ export interface Messages {
 }
 
 const en: Messages = {
+  intro: {
+    loading: "calibrating lens",
+    enter: "Click to enter",
+    hint: "sound on · press Enter",
+  },
   command: {
     cta: "Press {key} to explore...",
     placeholder: "Type a destination — tech, projects, live...",
@@ -141,6 +151,11 @@ const en: Messages = {
 };
 
 const zh: Messages = {
+  intro: {
+    loading: "镜头校准中",
+    enter: "点击进入",
+    hint: "将开启声音 · 也可按 Enter",
+  },
   command: {
     cta: "按 {key} 开始探索...",
     placeholder: "输入目的地 —— tech、projects、live...",
@@ -211,6 +226,11 @@ const zh: Messages = {
 };
 
 const ja: Messages = {
+  intro: {
+    loading: "レンズ調整中",
+    enter: "クリックして入る",
+    hint: "音声あり · Enter でも入れます",
+  },
   command: {
     cta: "{key} を押して探索...",
     placeholder: "行き先を入力 — tech、projects、live...",

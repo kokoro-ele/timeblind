@@ -7,14 +7,14 @@
     "url": "https://livliv.ai"
   },
   "lines": {
-    "greet": [
+    "welcome": [
       {
-        "en": "Hi! I'm Yuriko, Zetian's on-site guide. Move your cursor, I'm watching~",
-        "zh": "你好！我是百合子，Zetian 的站内向导。动动鼠标，我在看着哦~",
-        "ja": "こんにちは！ゼティアンの案内役、ゆりこです。カーソルを動かしてみて、ちゃんと見てるよ〜",
+        "en": "Welcome! I'm Yuriko, Zetian's on-site guide. Move your cursor, I'm watching~",
+        "zh": "欢迎光临！我是百合子，Zetian 的站内向导。动动鼠标，我在看着哦~",
+        "ja": "ようこそ！ゼティアンの案内役、ゆりこです。カーソルを動かしてみて、ちゃんと見てるよ〜",
         "say": {
-          "en": "Hi! I'm Yuri-ko, Zeh-tyen's on-site guide. Move your cursor, I'm watching!",
-          "zh": "你好！我是百合子，这个网站的向导。动动鼠标，我在看着哦。"
+          "en": "Welcome! I'm Yuri-ko, Zeh-tyen's on-site guide. Move your cursor, I'm watching!",
+          "zh": "欢迎光临！我是百合子，这个网站的向导。动动鼠标，我在看着哦。"
         }
       }
     ],

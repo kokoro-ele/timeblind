@@ -7,6 +7,7 @@ import companion from "@data/companion.json";
 import voiceClips from "@data/companion-voice.json";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { loc, type Locale, type Localized } from "@/i18n/config";
+import { INTRO_ENTER, announceCompanionReady, introState } from "@/lib/intro";
 
 type Line = Localized<string>;
 type LineKey = Exclude<keyof typeof companion.lines, "sections">;
@@ -64,6 +65,9 @@ export default function Companion() {
   const [speaking, setSpeaking] = useState(false);
   const localeNowRef = useRef<Locale>(locale);
   localeNowRef.current = locale;
+
+  const [entered, setEntered] = useState(false);
+  const greetedRef = useRef(false);
 
   const awayRef = useRef(false);
   const pokesRef = useRef<number[]>([]);
@@ -137,6 +141,7 @@ export default function Companion() {
       if (cancelled) return;
       if (!Player.isSupported()) {
         setFailed(true);
+        announceCompanionReady();
         return;
       }
       player = new Player(canvas, { followPointer: "page", maxPixelRatio: 2 });
@@ -163,10 +168,12 @@ export default function Companion() {
         speech.volume = 0.9;
         speechRef.current = speech;
         setSpeechReady(true);
+        announceCompanionReady();
       } catch (e) {
         if ((e as Error).name !== "AbortError") {
           console.warn("[companion]", e);
           setFailed(true);
+          announceCompanionReady();
         }
       }
     })();
@@ -188,15 +195,30 @@ export default function Companion() {
     else player.play();
   }, [hidden, ready]);
 
-  // greet once she is on screen
+  // the lens intro's click lets her speak: she welcomes the visitor as it opens
   useEffect(() => {
-    if (!ready || hidden) return;
+    if (introState.entered) setEntered(true);
+    const onEnter = () => {
+      if (voiceOnRef.current) {
+        speechRef.current?.unlock();
+        unlockedRef.current = !!speechRef.current;
+      }
+      setEntered(true);
+    };
+    window.addEventListener(INTRO_ENTER, onEnter);
+    return () => window.removeEventListener(INTRO_ENTER, onEnter);
+  }, []);
+
+  useEffect(() => {
+    if (!ready || !entered || hidden || greetedRef.current) return;
     const id = setTimeout(() => {
-      playerRef.current?.act("nod");
-      sayKey("greet", { force: true });
-    }, 700);
+      greetedRef.current = true;
+      playerRef.current?.act("hop", 0.8);
+      playerRef.current?.setExpression("smile", 0.8);
+      sayKey("welcome", { force: true });
+    }, 650);
     return () => clearTimeout(id);
-  }, [ready, hidden, sayKey]);
+  }, [ready, entered, hidden, sayKey]);
 
   // ---- typewriter + bubble lifetime --------------------------------------
   useEffect(() => {
@@ -222,7 +244,7 @@ export default function Companion() {
     if (!speechReady) return;
     let stored = false;
     try {
-      stored = localStorage.getItem(VOICE_KEY) === "1";
+      stored = localStorage.getItem(VOICE_KEY) !== "0"; // on unless they muted her
     } catch {}
     if (!stored) return;
     voiceOnRef.current = true;
@@ -262,7 +284,7 @@ export default function Companion() {
 
   // ---- reacting to the page ----------------------------------------------
   useEffect(() => {
-    if (!ready || hidden) return;
+    if (!ready || hidden || !entered) return;
     const player = playerRef.current;
     if (!player) return;
 
@@ -367,16 +389,16 @@ export default function Companion() {
         window.removeEventListener(ev, onActivity);
       }
     };
-  }, [ready, hidden, say, sayKey, next]);
+  }, [ready, hidden, entered, say, sayKey, next]);
 
   // switching language: answer in the new one
   useEffect(() => {
     if (localeRef.current === locale) return;
     localeRef.current = locale;
-    if (!ready || hidden) return;
+    if (!ready || hidden || !entered) return;
     playerRef.current?.act("hop", 0.6);
     sayKey("locale", { force: true });
-  }, [locale, ready, hidden, sayKey]);
+  }, [locale, ready, hidden, entered, sayKey]);
 
   // ---- poking her ----------------------------------------------------------
   const onPoke = (e: PointerEvent<HTMLButtonElement>) => {
