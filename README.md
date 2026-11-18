@@ -40,6 +40,7 @@ source ~/.venvs/tts/bin/activate && python scripts/gen-voice.py
 
 A line can carry `"say": { "zh": "..." }` when the spoken text should differ from the shown text
 (names, English words in ja/zh), or `"say": false` to stay silent. Setup is in the script's header.
+The "cute" pass is pure ffmpeg (pitch + formant lift, EQ, compression); tune `CUTE` in the script.
 
 ### Localized fields
 

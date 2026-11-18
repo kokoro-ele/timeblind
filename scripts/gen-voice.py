@@ -34,6 +34,29 @@ VOICES = {
     "zh": {"voice": "zf_xiaoyi", "lang_code": "z", "speed": 1.0},
 }
 
+# The "cute" pass, ffmpeg only. asetrate raises pitch and formants together (a smaller,
+# younger-sounding voice), atempo brings the duration back (a touch quicker), then the EQ
+# thins the chest, lifts presence and air, and a light compressor keeps it even.
+CUTE = {"pitch": 1.13, "tempo": 1.04}
+TRIM = (
+    "silenceremove=start_periods=1:start_threshold=-50dB,areverse,"
+    "silenceremove=start_periods=1:start_threshold=-50dB,areverse"
+)
+
+
+def cute_filter(rate: int) -> str:
+    pitch, tempo = CUTE["pitch"], CUTE["tempo"]
+    return ",".join([
+        f"asetrate={rate}*{pitch}",
+        f"aresample={rate}",
+        f"atempo={tempo}/{pitch}",
+        "equalizer=f=220:t=q:w=1:g=-4",
+        "equalizer=f=3200:t=q:w=1.2:g=3",
+        "highshelf=f=7500:g=3",
+        "deesser=i=0.4",
+        "acompressor=threshold=-20dB:ratio=3:attack=5:release=80:makeup=2",
+    ])
+
 
 def iter_lines(node):
     if isinstance(node, list):
@@ -61,7 +84,7 @@ def main():
                 continue  # falls back to English on the page, and so does the voice
             spoken = (say or {}).get(locale, shown)
             spoken = spoken.replace("~", "").replace("〜", "").strip()
-            key = json.dumps([MODEL, cfg, spoken], ensure_ascii=False)
+            key = json.dumps([MODEL, cfg, CUTE, spoken], ensure_ascii=False)
             name = hashlib.sha1(key.encode()).hexdigest()[:12] + ".mp3"
             jobs.append((locale, shown, spoken, OUT / locale / name))
 
@@ -84,8 +107,7 @@ def main():
                 sf.write(wav.name, audio, model.sample_rate)
                 subprocess.run(
                     ["ffmpeg", "-loglevel", "error", "-y", "-i", wav.name,
-                     "-af", "silenceremove=start_periods=1:start_threshold=-50dB,areverse,"
-                            "silenceremove=start_periods=1:start_threshold=-50dB,areverse",
+                     "-af", f"{TRIM},{cute_filter(model.sample_rate)}",
                      "-ac", "1", "-b:a", "56k", str(file)],
                     check=True,
                 )
