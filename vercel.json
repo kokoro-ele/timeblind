@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/cv", "destination": "/zetian_cv.pdf" }
+  ],
+  "headers": [
+    {
+      "source": "/zetian_cv.pdf",
+      "headers": [
+        { "key": "Content-Type", "value": "application/pdf" },
+        { "key": "Content-Disposition", "value": "inline; filename=\"zetian_cv.pdf\"" }
+      ]
+    }
+  ]
+}
